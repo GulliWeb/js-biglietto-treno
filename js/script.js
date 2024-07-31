@@ -15,16 +15,18 @@ if (age < 18) {
     let discount = ticketPrice * 0.20
     let tot = ticketPrice - discount
     message = `Avendo ${age} anni hai diritto ad uno sconto del 20% ! il prezzo finale, percorrendo ${km} km sarà di ${tot.toFixed(2)}€`;
+    infoBonus.innerText = ` Il prezzo prima dello sconto era di ${ticketPrice} € `
 } else if (age > 65) {
     discount = ticketPrice * 0.40
     tot = ticketPrice - discount
     message = `Avendo ${age} anni hai diritto ad uno sconto del 40% ! il prezzo finale, percorrendo ${km} km sarà di ${tot.toFixed(2)}€`;
-}
+    infoBonus.innerText = ` Il prezzo prima dello sconto era di ${ticketPrice} € `
+} 
 
 // STEP 3 - OUTPUT
 console.log(message)
 finalPrice.innerText = message
-infoBonus.innerText = ` Il prezzo prima dello sconto era di ${ticketPrice} € `
+
 
 
 
