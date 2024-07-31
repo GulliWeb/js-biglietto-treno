@@ -6,6 +6,12 @@ const infoBonus = document.getElementById('infoBonus')
 const km = parseInt(prompt('Ciao ! quanti km vuoi percorrere sul treno oggi ?'))
 const age = parseInt(prompt('Ora inserisci la tua età'))
 
+// CONTROLLO INPUT UTENTE
+if (isNaN(km) || isNaN(age) ) {
+    alert('Attenzione! inserire dei valori!')
+    location.reload()
+}
+
 // STEP 2 - ELABORAZIONE DATI + BONUS DUE NUMERI DECIMALI
 let ticketPrice = km * 0.21
 let message = ` Il prezzo del biglietto sarà di ${ticketPrice.toFixed(2)} €`
@@ -26,7 +32,6 @@ if (age < 18) {
 // STEP 3 - OUTPUT
 console.log(message)
 finalPrice.innerText = message
-
 
 
 
